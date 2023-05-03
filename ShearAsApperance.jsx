@@ -6,8 +6,8 @@
 main();
 
 function main(){
-    var sel=app.selection;
-    if (sel.length==0 || !sel[0].hasOwnProperty('applyEffect')) return;
+    var sel=app.selection||null;
+    if (typeof(sel) === 'undefined' || sel === null || sel.length==0 || !sel[0].hasOwnProperty('applyEffect')) return;
     
     var diagRef="dialog{\
         text:'Shear in apperance',\
