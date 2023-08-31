@@ -1,12 +1,16 @@
 var scope = app.activeDocument.selection.length ? app.activeDocument.selection : app.activeDocument.pageItems;
 
-var find = "([^\uFF1A\u003A\u2B1C\u00D8\u00B1\u0000-\u001F\u0020-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u0030-\u0039\u0041-\u005A\u0061-\u007A])";
+var find = "([^\u00B0\uFF1A\u003A\u2B1C\u00D8\u00B1\u0000-\u001F\u0020-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u0030-\u0039\u0041-\u005A\u0061-\u007A])";
 /*
-\uFF1A Escaped character. Matches a "：" character (char code 65306).
+
+
+
 \u003A Escaped character. Matches a ":" character (char code 58).
-\u2B1C Escaped character. Matches a "⬜" character (char code 11036).
-\u00D8 Escaped character. Matches a "Ø" character (char code 216).
+\u00B0 Escaped character. Matches a "°" character (char code 176).
 \u00B1 Escaped character. Matches a "±" character (char code 177).
+\u00D8 Escaped character. Matches a "Ø" character (char code 216).
+\u2B1C Escaped character. Matches a "⬜" character (char code 11036).
+\uFF1A Escaped character. Matches a "：" character (char code 65306).
 \u0000-\u001F Range. Matches a character in the range NULL to US (char code 0 to 31). Case sensitive.
 \u0020-\u002F Range. Matches a character in the range SPACE to "/" (char code 32 to 47). Case sensitive.
 \u003A-\u0040 Range. Matches a character in the range ":" to "@" (char code 58 to 64). Case sensitive.
