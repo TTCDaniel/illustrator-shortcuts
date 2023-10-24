@@ -1,11 +1,10 @@
 var scope = app.activeDocument.selection.length ? app.activeDocument.selection : app.activeDocument.pageItems;
 
-var find = "([^\u00B0\uFF1A\u003A\u2B1C\u00D8\u00B1\u0000-\u001F\u0020-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u0030-\u0039\u0041-\u005A\u0061-\u007A])";
+var find = "([^\u00B0\uFF1A\u2B1C\u00D8\u00B1\u0000-\u001F\u0020-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u0030-\u0039\u0041-\u005A\u0061-\u007A])";
 /*
 
 
 
-\u003A Escaped character. Matches a ":" character (char code 58).
 \u00B0 Escaped character. Matches a "°" character (char code 176).
 \u00B1 Escaped character. Matches a "±" character (char code 177).
 \u00D8 Escaped character. Matches a "Ø" character (char code 216).
